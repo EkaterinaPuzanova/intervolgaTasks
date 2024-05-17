@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task2</title>
+</head>
+<body>
+    <div class="page">
+        <div class="board">
+            <button class="button-close" type="button">X</button>
+        </div>
+        <form id="form" class="form">
+            <p class="title">Транспортные средства и водители</p>
+
+            <div class="info-car">
+                <label>
+                    Гос-номер
+                    <input
+                        class="input"
+                        type="text"
+                        name="car-number"
+                        id="car-number"
+                        placeholder="Укажите гос-номер: пример С649ВН"
+                        autofocus
+                    >
+                </label>
+                <label>
+                    Транспортное средство
+                    <input
+                        class="input"
+                        type="text"
+                        name="car-name"
+                        id="car-name"
+                        placeholder="Транспортное средство: пример LADA Granta"
+                    >
+                </label>
+                <label>
+                    Ориентировочная дата прибытия к покупателю
+                    <input
+                        class="input"
+                        type="text"
+                        name="date"
+                        id="date"
+                        placeholder="Дата"
+                        onfocus="(this.type = 'date')"
+                    >
+                </label>
+            </div>
+            
+
+            <div class="info-driver">
+                <p class="subtitle">Данные о водителе</p>
+
+                <label>
+                    ФИО
+                    <input
+                        class="input"
+                        type="text"
+                        name="driver-name"
+                        id="driver-name"
+                        placeholder="Укажите ФИО водителя"
+                    >
+                </label>
+                <label>
+                    Паспортные данные
+                    <div class="input-wrapper">
+                        <input
+                            class="input"
+                            type="number"
+                            name="passport-series"
+                            id="passport-series"
+                            placeholder="Серия"
+                        >
+                        <input
+                            class="input"
+                            type="text"
+                            name="passport-number"
+                            id="passport-number"
+                            placeholder="Номер"
+                        >
+                    </div>
+                </label>
+                <label>
+                    Кем выдан
+                    <input
+                        class="input"
+                        type="text"
+                        name="passport-office"
+                        id="passport-office"
+                        placeholder="Кем выдан"
+                    >
+                </label>
+                <label>
+                    Когда выдан
+                    <input
+                        class="input"
+                        type="text"
+                        name="passport-date"
+                        id="passport-date"
+                        placeholder="Когда выдан"
+                        onfocus="(this.type = 'date')"
+                    >
+                </label>
+            </div>
+
+            <button class="button button-submit" type="submit">
+                Отправить
+            </button>
+            <button class="button button-cancel" type="reset">
+                Отменить
+            </button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

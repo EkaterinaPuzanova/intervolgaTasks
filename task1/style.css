@@ -1,0 +1,86 @@
+/* Фиксированная ширина красного и зеленого блока  */
+:root {
+    --width-fix: 190px; /* Фиксированная ширина красного и зеленого блока  */
+    --width-img: 280px; /* Ширина картинки контентного блока  */
+    --height-img: 170px; /* Высота картинки контентного блока  */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer"
+}
+
+header,
+footer {
+    background: #ccc;
+}
+
+header {
+    grid-area: header;
+}
+
+footer {
+    grid-area: footer;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: var(--width-fix) 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+    "side2 cont"
+    "side1 cont"
+    ". cont"
+}
+
+.wrapperContent {
+    grid-area: cont;
+}
+
+.content {
+    padding: 1vw .5vw;
+    background: yellow;
+}
+
+.content__image {
+    display: block;
+    float: left;
+    width: var(--width-img);
+    height: var(--height-img);
+    margin: 1vw;
+    margin-left: 0;
+    background: #e3e3e3;;
+}
+
+.side-1 {
+    grid-area: side1;
+    background: green;
+}
+
+.side-2 {
+    grid-area: side2;
+    background: red;
+}
+
+@media screen and (max-width: 978px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "side2"
+            "cont"
+            "side1"
+    }
+}

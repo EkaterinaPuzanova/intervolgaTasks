@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page {
+    display: flex;
+    height: 100vh;
+    justify-content: center; /*Центрирование по горизонтали*/
+    align-items: center;     /*Центрирование по вертикали */
+}
+
+.board {
+    position: absolute;
+    width: calc(300px + 2 * 20px);
+    height: calc(600px + 2 * 20px);
+    background: rgb(196, 189, 189);
+}
+
+.button-close {
+    position: absolute;
+    z-index: 3;
+    top: 30px;
+    right: 30px;
+    background: transparent;
+    border: none;
+    font-size: 10px;
+    color: #626060;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.form {
+    position: absolute;
+    width: 300px;
+    height: 600px;
+    padding: 20px;
+    border: 1px solid black;
+    background: rgb(255, 255, 255);
+}
+
+.title,
+.subtitle {
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    outline: 0;
+}
+
+.input.error {
+    border-color: red;
+}
+
+input::placeholder {
+    color: #ccc;
+    font-size: 10px;
+}
+
+.info-car,
+.info-driver {
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+#passport-series,
+#passport-number {
+    width: 49%;
+}
+
+.button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: 0;
+    font-size: 10px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.button-submit {
+    background-color: #000000;
+    color: #fff;
+}
+
+.button-cancel {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.button-submit:hover,
+.button-cancel:hover,
+.button-close:hover {
+    opacity: .6;
+}
